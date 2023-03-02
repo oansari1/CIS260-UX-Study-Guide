@@ -1,0 +1,248 @@
+*{ /*FORMATTING FOR EVERYTHING*/
+margin: 0;
+padding: 0;
+font-family: 'Proxima Nova', sans-serif;                 
+font-size: 1.02em;
+font-weight: 500;
+background-color: #eef2f4;
+border-radius: 30px;
+}
+
+h1 {font-size: 200%; /*UI/UX STUDY GUIDE HEADER*/
+align-self: center;
+text-align: center;
+margin-top: 50px;
+margin-bottom: 50px;}
+
+h2 {font-size: 150%;
+	align-self: center;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;}
+
+header {display: flex; /*NAVIGATION BETWEEN PAGES*/
+	justify-content: space-evenly;
+}
+
+.container{
+	z-index:1; /*allows for shadow to appear*/
+	width: 100%;
+	}
+	.cont { /*NAV BAR NOT BUTTONS*/
+	  width:100%;
+	  background:black;
+	  margin:auto;
+	  padding:0px;
+	  height:75px;
+	  border-radius: 0;
+	  justify-content: space-evenly;
+	}
+  
+	ul li {width: 33.3333333333333%;
+	text-align: center;
+	height: 75px;
+}
+  
+  
+	li { /*NAVIGATION BUTTONS*/
+	  display: inline;
+	  float:left;
+	  border-radius: 0;
+		}
+	
+	li a{
+	display:block;
+	margin:0;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	text-decoration:none;
+	color: #151515; /*COLOR OF TEXT IN MAIN NAV MENU*/
+	width: 100%;
+	height: 25px;
+	border-radius: 0;
+	background-color: #DEEAE6;
+	}
+	li a:hover{
+	  background-color:#B2E3C9; /*COLOR OF NAV BOXES UPON HOVER*/
+  
+	} 
+	
+	/*Shadow effects*/
+	
+	.shadow
+	{
+		position:relative;       
+	
+	}
+	.shadow:before, .shadow:after
+	{
+	  content:"";
+		position:absolute; 
+		z-index:-1;
+		-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+		-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+		box-shadow:0 0 20px rgba(0,0,0,0.8);
+		top:0;
+		bottom:0;
+		left:10px;
+		right:10px;
+		-moz-border-radius:200px / 20px;
+		border-radius:200px / 20px;
+	} 
+	.shadow:after
+	{
+	  right:20px; 
+		left:auto;
+		-webkit-transform:skew(8deg) rotate(3deg); 
+		   -moz-transform:skew(8deg) rotate(3deg);     
+			-ms-transform:skew(8deg) rotate(3deg);     
+			 -o-transform:skew(8deg) rotate(3deg); 
+				transform:skew(8deg) rotate(3deg);
+	}
+/*END OF MAIN NAVIGATION FORMATTING*/
+
+/* TERMS NAV BAR */
+
+#one {margin-left: 8%}
+
+#two{Margin-left: 8%;
+margin-right: 4%;}
+
+#three {margin-right: 8%;
+margin-left:4%}
+
+#four{Margin-right: 8%;}
+
+nav {
+display: flex;
+margin: auto;
+margin-bottom: 20px;
+background-color: #DEEAE6;
+align-items: center;
+align-content: center;
+}
+	  
+nav ul {
+list-style: none;
+text-decoration: none;
+background-color: #DEEAE6;
+border-radius: 0;
+width: 100%;
+}
+	  
+.category { /*JUST THE LITTLE TINY BUBBLE THAT THE TEXT IS IN. NOT THE ENTIRE BUTTON*/
+background-color: #DEEAE6;
+color: black;
+}
+	  
+nav > ul > li { /*ACTUAL BUTTONS FOR CATEGORIES*/
+width: 15%;
+text-align: center;
+display: inline-block;
+position: relative;
+background-color: #DEEAE6;
+border-radius: 0;
+}
+	  
+nav ul li:hover { /*WHOLE BUTTON HOVER BAKCGROUND #B2E3C9*/
+background-color: #B2E3C9;
+}
+	  
+nav ul li:hover > a { /*TINY TEXT BUBBLE NOT BUTTON ON HOVER#B2E3C9*/
+background-color: #B2E3C9;
+}
+	 
+/*END OF TERMS NAVIGATION BAR*/
+
+
+#bigbox {/*display: flex;
+margin: auto;*/
+width: 90%;  /*CONTAINS SELECTED, BUTTON, DEFINITION, TERMS*/
+/*border: 1px black solid;*/
+padding-left: 8%;
+padding-top: 5%;
+}
+
+#selected {display: flex; /*SHOULD BE WHERE THE SELECTED TERM APPEARS*/
+width: 40%;
+margin: auto;
+height: 50px;
+text-align: center;
+margin-bottom: 30px;
+align-items: center;
+justify-content: center;}
+
+
+#User_Guess { /*WHERE THE USER TYPES THEIR DEFINITION*/
+display: flex;
+width: 40%;
+margin: auto;
+height: 50px;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 30px;
+border: 1px solid #0B3A5E;}
+
+.button {width: 15%;
+background-color: #DEEAE6;
+border: 1px solid black;
+margin-right: 20px;
+padding: 5px;}
+
+#buttons {display: flex; /*CONTAINER BOX FOR THE BUTTONS. EASE OF FORMATTING*/
+width: 40%;
+margin: auto;
+height: 50px;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 30px;
+align-items: center;
+justify-content: center;
+}
+
+
+#def {/*CONTAINER FOR OFFICIAL DEFINITION*/
+	width: 300px;
+	margin: auto;
+background-color: rgba(255,255,255,0.5);}
+
+.def { /*INSIDE DEFINITION CONTAINER*/
+display: flex;
+align-items: center;
+text-align: center;
+text-shadow: -1px 2px 3px white;
+border: 1px solid #0B3A5E;
+width: 40%;
+margin: 50px 200px;
+background-image: url("https://i.pinimg.com/564x/33/0c/03/330c03756d9d786344a09b609612d98b.jpg");
+background-size: 100%;
+height: 400px;}
+
+/*BOX WHERE THE LIST OF TERMS SHOULD APPEAR*/
+#term_list {
+display: flex;
+flex-flow: column nowrap;
+border: 2px black solid;
+/*float: left;*/
+height: 600px;
+width: 20%;
+margin: 0;
+text-align: center;
+border-radius: 0;}
+
+#term_list li a {
+display:block;
+margin:0;
+padding-top: 5px;
+padding-bottom: 5px;
+text-decoration:none;
+color: #151515; /*COLOR OF TEXT*/
+width: 100%;
+height: auto;
+border-radius: 0;
+background-color: #eef2f4;
+}
+
+#selected_category {
+	font-size: 20pt;
+}
