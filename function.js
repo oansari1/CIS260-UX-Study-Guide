@@ -28,7 +28,7 @@ const definitions = [ "UX stands for User Experience, which refers to how a pers
 "Usability testing is the practice of testing how easy a design is to use with a group of representative users. It usually involves observing users as they attempt to complete tasks and can be done for different types of designs. It is often conducted repeatedly, from early development until a product's release.",
 "A web development framework is a set of resources and tools for software developers to build and manage web applications, web services, and websites.",
 "Analytics platforms measure activity and behavior on a website, for example: how many users visit, how long they stay, how many pages they visit, which pages they visit, and whether they arrive by following a link or not.",
-"Personas are created with information gathered from user and stakeholder interviews. As a result of these activities, you can identify the most important functionality an audience needs.",
+"A fictional character that represents a typical user of an app, website, or other product. A user persona helps clarify your target audience: It helps with design iteration.",
 "Card sorting is a method used to help design or evaluate the information architecture of a site. In a card sorting session, participants organize topics into categories that make sense to them and they may also help you label these groups.",
 "A wireframe is a two-dimensional illustration of a page's interface that specifically focuses on space allocation and prioritization of content, functionalities available, and intended behaviors. For these reasons, wireframes typically do not include any styling, color, or graphics.",
 "A Gantt chart is a bar chart that illustrates a project schedule. It was designed and popularized by Henry Gantt around the years 1910–1915. Modern Gantt charts also show the dependency relationships between activities and the current schedule status.",
@@ -39,7 +39,6 @@ const definitions = [ "UX stands for User Experience, which refers to how a pers
 "A visual representation of a user's interaction with a product",
 "It exists as a set of branding rules that guide how products should look and feel, details about typography, use cases for UI patterns, and more.",
 "What the user believes about how a user experience works. Mental models are built in a user's brain and are based on what they know from past interactions with websites, mobile phones, and other interactive products.",
-"A fictional character that represents a typical user of an app, website, or other product. A user persona helps clarify your target audience: It helps with design iteration.",
 "Fast-paced, targeted testing of a website or app with real users in moderated sessions.",
 "Your blueprint for how you're going to conduct UX activities. Not to be confused with the overall project plan (which is usually owned by a project manager or program manager), a UX project plan helps you think about how UX work will integrate with the broader project timeline.",
 "collects quantitative and qualitative data about a user's interactions and experience with a website or digital product.",
@@ -81,6 +80,7 @@ const research = [
   "Metrics/Analytics"
 ];
 const planning = [
+  "Persona",
   "Card Sort",
   "Wireframes",
   "Gantt Chart",
@@ -93,8 +93,7 @@ const planning = [
   "Mental Models"
 ];
 const refinement = [
-  "Design Iteration",
-  "Personas",
+//  "Design Iteration",
   "Quick and Dirty Usability Test",
   "UX Questionaire",
   "Design Triage",
