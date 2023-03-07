@@ -173,18 +173,6 @@ align-items: center;
 justify-content: center;}
 
 
-.button {display: flex;
-margin: auto;
-width: 30%;
-background-color: white;
-border: 1px solid white;
-padding: 5px;}
-
-.button:hover{
-	  background-color:#c5dfd2; /*COLOR OF CLEAR UPON HOVER*/
-  
-	} 
-
 #buttons {display: flex; /*CONTAINER BOX FOR THE BUTTONS. EASE OF FORMATTING*/
 width: 40%;
 margin: auto;
@@ -258,6 +246,7 @@ padding-bottom: 10px;}
 	grid-template-columns: 1fr;
 }
 
+/*Button Styling*/
 .pushable {
     background: #a0a0a0;
     border-radius: 12px;
