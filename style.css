@@ -4,8 +4,7 @@ padding: 0;
 font-family: 'Proxima Nova', sans-serif;
 font-size: 1.02em;
 font-weight: 500;
-border-radius: 30px;
-}
+border-radius: 30px;}
 
 body {height: 100%;}
 
@@ -14,270 +13,107 @@ align-self: center;
 text-align: center;
 color: black;
 padding: 0;
-margin: auto;}
+margin: auto;
+margin-top: 2%;}
 
-h2 {font-size: 150%;
+h2 {font-size: 125%;
 	align-self: center;
 	text-align: center;
 	margin-top: 10px;
-	margin-bottom: 10px;}
+	margin-bottom: 20px;}
 
 header {display: flex; /*NAVIGATION BETWEEN PAGES*/
 	justify-content: space-evenly;
 }
 
-.container{
-	z-index:1; /*allows for shadow to appear*/
+.container{ z-index:1; /*allows for shadow to appear*/
 	width: 100%;
+margin-bottom: 20px;}
 
-	}
 	.cont { /*NAV BAR NOT BUTTONS*/
 	  width:100%;
 	  margin:auto;
-	  height:75px;
+	  height:100%;
 	  border-radius: 0;
-	  justify-content: space-evenly;
-	}
+	  justify-content: space-evenly;}
 
 	ul li {width: 50%;
 	text-align: center;
-	height: 75px;
-}
-
+	height: 100%;}
 
 	li { /*NAVIGATION BUTTONS*/
 	  display: inline;
 	  float:left;
-	  border-radius: 0;
-		}
+	  border-radius: 0;}
 
-	li a{
-	display:block;
+	.nav {box-shadow: 10px 10px 10px rgb(195, 195, 195);}
+
+	li a{ display:block;
 	margin:0;
 	padding-top: 25px;
 	padding-bottom: 25px;
 	text-decoration:none;
 	color: #151515; /*COLOR OF TEXT IN MAIN NAV MENU*/
 	width: 100%;
-	height: 10px;
-	border-radius: 0;
-	background-color: rgb(251, 247, 247);
-	}
+	height: 20px;
+	border-radius: 0;}
+
+	#concepts :hover {background-color: #ecd4d1;
+	border-radius: 6.5px;}
+
+	#research :hover {background-color: #d0d9e1;
+		border-radius: 6.5px;}
+
+	#planning :hover {background-color: #a8c4cd;
+		border-radius: 6.5px;}
+
+	#refinement :hover {background-color: #bfd6ce;
+		border-radius: 6.5px;}
+
  /*COLOR OF NAV BOXES UPON HOVER*/
-	li a:hover{
-	  background-color:#c5dfd2;
-	}
+	#cont {background-image: linear-gradient(to right, white , #AEAEEE);}
+	#cont :hover {background-image: linear-gradient(to right, white , #A8D3C5);}
 
-	.terms {
-		height: 10px;
-		padding-top: 5px;
-		padding-bottom: 10px;
-	}
-
-	/*Shadow effects*/
-
-	.shadow
-	{
-		position:relative;
-	}
-	.shadow:before, .shadow:after
-	{
-	  content:"";
-		z-index:-1;
-		-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-		-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-		box-shadow:0 0 20px rgba(0,0,0,0.8);
-		top:0;
-		bottom:0;
-		left:10px;
-		right:10px;
-		-moz-border-radius:200px / 20px;
-		border-radius:200px / 20px;
-	}
-	.shadow:after
-	{
-	  right:20px;
-		left:auto;
-		-webkit-transform:skew(8deg) rotate(3deg);
-		   -moz-transform:skew(8deg) rotate(3deg);
-			-ms-transform:skew(8deg) rotate(3deg);
-			 -o-transform:skew(8deg) rotate(3deg);
-				transform:skew(8deg) rotate(3deg);
-	}
-
-/*Button Styling*/
-.pushable {
-    background: #a0a0a0;
-    border-radius: 12px;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
-  }
-  .front {
-    display: block;
-    padding: 12px 42px;
-    border-radius: 12px;
-    font-size: 1.25rem;
-    background: #ffffff;
-    color: #707070;
-    transform: translateY(-6px);
-  }
-
-  .pushable:active .front {
-    transform: translateY(-2px);
-  }
+	#ind {background-image: linear-gradient(to right, #AEAEEE , white);}
+	#ind :hover {background-image: linear-gradient(to right, #A8D3C5 , white);}
 /*END OF MAIN NAVIGATION FORMATTING*/
+	
 
-/* TERMS NAV BAR
-
-#one {margin-left: 8%}
-
-#two{Margin-left: 8%;
-margin-right: 4%;}
-
-#three {margin-right: 8%;
-margin-left:4%}
-
-#four{Margin-right: 8%;}
-
-nav {
-display: flex;
-margin: auto;
-margin-bottom: 20px;
-background-color: #DEEAE6;
-align-items: center;
-align-content: center;
-}
-
-nav ul {
-list-style: none;
-text-decoration: none;
-background-color: #DEEAE6;
-border-radius: 0;
-width: 100%;
-}
-
-.category { /*JUST THE LITTLE TINY BUBBLE THAT THE TEXT IS IN. NOT THE ENTIRE BUTTON
-background-color: #DEEAE6;
-color: black;
-}
-
-nav > ul > li { /*ACTUAL BUTTONS FOR CATEGORIES
-width: 15%;
-text-align: center;
-display: inline-block;
-position: relative;
-background-color: #DEEAE6;
-border-radius: 0;
-}
-
-nav ul li:hover { /*WHOLE BUTTON HOVER BAKCGROUND #B2E3C9
-background-color: #B2E3C9;
-}
-
-nav ul li:hover > a { /*TINY TEXT BUBBLE NOT BUTTON ON HOVER#B2E3C9
-background-color: #B2E3C9;
-}
-
-/*END OF TERMS NAVIGATION BAR*/
-
-
-#bigbox {display: flex;
-flex-direction: column;
-margin: auto;
-width: 50%;  /*CONTAINS SELECTED, BUTTON, DEFINITION*/
-/*border: 1px black solid;*/
-}
+.terms { height: 10px;
+padding-top: 0px;
+padding-bottom: 13px;}
 
 #selected {display: flex; /*SHOULD BE WHERE THE SELECTED TERM APPEARS*/
 width: 50%;
 margin: auto;
-margin-top: 5%;
+margin-top: 20px;
+margin-bottom: 0;
 height: 50px;
 text-align: center;
-margin-bottom: 5;
 align-items: center;
 justify-content: center;}
 
-
-.button {display: flex;
-margin: auto;
-width: 30%;
-background-color: white;
-border: 1px solid white;
-padding: 5px;}
-
-.button:hover{ /*DEFINE BUTTON*/
-	  background-color:#c5dfd2; /*COLOR OF CLEAR UPON HOVER*/
-
-	}
-
-#buttons {display: flex; /*CONTAINER BOX FOR THE BUTTONS. EASE OF FORMATTING*/
-width: 40%;
-margin: auto;
-height: 50px;
-text-align: center;
-margin-top: 30px;
-margin-bottom: 30px;
-align-items: center;
-justify-content: center;
-}
-
-
 #def {/*CONTAINER FOR OFFICIAL DEFINITION*/
-	width: 50%;
-	margin: auto;
+width: 50%;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 0;
 background-color: rgba(255,255,255,0.5);}
 
 .def { /*INSIDE DEFINITION CONTAINER*/
 display: flex;
-float: right;
+flex-direction: column;
 align-items: center;
 text-align: center;
 text-shadow: -1px 2px 3px white;
 border: 1px solid #0B3A5E;
-width: 75%;
+width: 45%;
 margin: auto;
 background-image: url("https://i.pinimg.com/564x/33/0c/03/330c03756d9d786344a09b609612d98b.jpg");
 background-size: 100%;
-height: 400px;}
-
-/*BOX WHERE THE LIST OF TERMS SHOULD APPEAR
-#term_list {
-display: flex;
-flex-flow: column nowrap;
-border-radius: 30%;
-float: left;
-height: 600px;
-width: 20%;
-margin: 0;
-text-align: center;
-border-radius: 0;
-font-size: 15pt;}
-
-#term_list li a {
-display:block;
-margin:0;
-padding-top: 5px;
-padding-bottom: 5px;
-text-decoration:none;
-color: #151515; /*COLOR OF TEXT
-width: 100%;
-height: auto;
-border-radius: 0;
-background-color: #eef2f4;
-}
-
-#term_list :hover {
-background-color: #B2E3C9;}
-
-#selected_category {
-	font-size: 20pt;
-}
-
-.terms /*selected_term :hover {color: black; /*idk why this isn't working the way I want
-background-color: #eef2f4;} */
+height: 450px;
+box-shadow: 3px 3px 5px grey;
+border: none;}
 
 p {font-size: 100%;
 color: black;
@@ -286,16 +122,12 @@ border-radius: 0;}
 
 
 /*HOME AND ABOUT BACKGROUND*/
-.background {background-image: url('leaves.jpg');
-height:1000px;}
 
 #instructions {padding-top: 5%;
 margin: auto;
 align-self: center;
-text-align: center;}
-
-
-
+text-align: center;
+height: 100%;}
 
 /*SLIDER STUFF*/
 
@@ -307,52 +139,49 @@ align-items: center;
 text-align: center;
 width: 50%;
 margin: auto;
-margin-top: 5%;
-height: 400px;
-}
+margin-top: 0px;
+color: black;}
 
 
 .slide{
+	margin: auto;
     width: 75%;
-    height: 20px;
+    min-height: 30px;
     justify-content: center;
-    border-radius: 50px;
+    border-radius: 30px;
     display: flex;
-    box-shadow: 3px 3px 5px black;
+    box-shadow: 3px 3px 5px grey;
     opacity: .5;
 	flex-direction: column;
 	margin-top: 10px;
-	float: left;
-
-}
+	float: left;}
 
 
-.active{
-    flex-grow: 1;
+
+.active{flex-grow: 1;
     transition-duration: 1s;
     opacity: 1;
     padding: 10px;
-    border-radius: 25px;
-    padding-bottom: 100px
-}
+    border-radius: 30px;
+	height: 100%;}
+
 .nonActive{
     flex-grow: 0;
-      opacity: .5;
-      transition-duration: 1s;
+      opacity: 1;
+      transition-duration: 1s;}
 
-}
-.slide:nth-of-type(1){background-color: pink;}
-.slide:nth-of-type(2){background-color: green;}
-.slide:nth-of-type(3){background-color: blue;}
-.slide:nth-of-type(4){background-color: red;}
-.slide:nth-of-type(5){background-color: yellow;}
-.slide:nth-of-type(6){background-color: purple;}
+.terms {background: none;
+margin: auto;}
+.terms :hover {background-color: #f6ebea;}
+
+.slide:nth-of-type(1){background-color: #FFEAE8;}
+.slide:nth-of-type(2){background-color: #EEF3F7;}
+.slide:nth-of-type(3){background-color: #D0E5EB;}
+.slide:nth-of-type(4){background-color: #DCEBE6;}
+
 
 @media screen and (max-width: 700px) {
-    .slide{
-        width: 20px;
-    }
-    .active{
-        border-radius: 30px
-    }
+    .slide{width: 20px;}
+
+    .active{border-radius: 30px}
 }

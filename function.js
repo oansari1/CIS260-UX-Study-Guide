@@ -108,27 +108,28 @@ const allTerms = concepts.concat(research, planning, refinement);
 $(document).ready(function(){
   /*Populate categories with terms*/
   for (var i=0; i < concepts.length; i++){
-    document.getElementById("concepts").innerHTML += "<li><a class='terms' value='" + i + "' href='javascript:;' onclick='defineTerm(" + i + ")'>" + concepts[i] + "</a></li>";
+    document.getElementById("concepts").innerHTML += "<li><a class='terms' id='concepts' value='" + i + "' href='javascript:;' onclick='defineTerm(" + i + ")'>" + concepts[i] + "</a></li>";
   }
   for (var i=0; i < research.length; i++){
-    document.getElementById("research").innerHTML += "<li><a class='terms' value='" + (i + concepts.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length) + ")'>" + research[i] + "</a></li>";
+    document.getElementById("research").innerHTML += "<li><a class='terms' id='research' value='" + (i + concepts.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length) + ")'>" + research[i] + "</a></li>";
   }
   for (var i=0; i < planning.length; i++){
-    document.getElementById("planning").innerHTML += "<li><a class='terms' value='" + (i + concepts.length + research.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length + research.length) + ")'>" + planning[i] + "</a></li>";
+    document.getElementById("planning").innerHTML += "<li><a class='terms' id='planning' value='" + (i + concepts.length + research.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length + research.length) + ")'>" + planning[i] + "</a></li>";
   }
   for (var i=0; i < refinement.length; i++){
-    document.getElementById("refinement").innerHTML += "<li><a class='terms' value='" + (i + concepts.length + research.length + planning.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length + research.length + planning.length) + ")'>" + refinement[i] + "</a></li>";
+    document.getElementById("refinement").innerHTML += "<li><a class='terms' id='refinement' value='" + (i + concepts.length + research.length + planning.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length + research.length + planning.length) + ")'>" + refinement[i] + "</a></li>";
   }
   i=0 ;
   $('.nonActive > li').hide()
   /*Sliding Menu*/
   $('.slide').click(function(){
-     $('.active').removeClass('active').addClass('nonActive')
-      $(this).removeClass('nonActive').addClass('active')
-      $('.active > li').show()
-      $('.nonActive > li').hide()
-      i= $(this).index()
-  })
+    if($(this).hasClass('nonActive')){
+    $('.active > li').slideToggle()
+    $('.active').removeClass('active').addClass('nonActive')
+    $(this).removeClass('nonActive').addClass('active')
+    $('.active > li').slideToggle()
+    i= $(this).index()
+    }})
 });
 
 /*User clicks a term, term box is populated*/

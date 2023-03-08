@@ -11,13 +11,15 @@
         <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
         <script src="function.js"></script>
 </head>
+
 <style>body{background-color: #eef2f4;}</style>
+
 <body>
       <header>
           <div class="container" >
               <ul class="shadow cont">
-                <li id="about"><a href="about.html">CONTRIBUTIONS</a></li>
-                <li id="study"><a href="index.html">STUDY GUIDE</a></li>
+                <li id="cont" class="nav"><a href="about.html">CONTRIBUTITORS</a></li>
+                <li id="ind" class="nav"><a href="index.html">STUDY GUIDE</a></li>
               </ul>
             </div>
       </header>
@@ -30,12 +32,10 @@
           <div class="slide slide3 nonActive" id="planning"><section href="javascript:;">Planning</section></div>
           <div class="slide slide4 nonActive" id="refinement"><section href="javascript:;">Refinement</section></div>
         </div>
-        <div id="bigbox"> <!-- CONTAINS TERMS BOX, SELECTED TERM, BUTTONS AND DEFINITION BOX-->
-          <div id="selected">SELECTED TERM DISPLAY HERE</div>
-          <div class = "def" id="Term_Definition"> <div id = "def">The correct definition will display here.</div></div>
-          <div id="buttons">
-            <button class="pushable" id="Clear_Button"  onclick="clearScreen()"><span class="front">Clear</span></button>
-          </div>
+                 
+          <div class = "def" id="Term_Definition">  
+            <div id="selected">SELECTED TERM DISPLAYS HERE</div>
+          <div id = "def">The correct definition will display here.</div>
         </div>
 </body>
 </html>
