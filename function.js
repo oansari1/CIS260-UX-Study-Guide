@@ -1,3 +1,4 @@
+/*Array of definitions*/
 const definitions = [ "UX stands for User Experience, which refers to how a person feels when they interact with a product or service. It involves understanding the user's needs, goals, and behaviors, and designing products and services that meet those needs in a way that is intuitive and pleasing to use.",
 "UI stands for User Interface, which refers to the visual and interactive elements of a product or service that the user interacts with. The goal of effective UI is to make the user's experience easy and intuitive, requiring minimum effort on the user's part to receive the maximum desired outcome.",
 "The process design teams use to create products that provide meaningful and relevant experiences to users. UX design involves the design of the entire process of acquiring and integrating the product, including aspects of branding, design, usability, and function. A good UX design not only enhances the user's experience but also improves the product's overall performance and success.",
@@ -45,6 +46,7 @@ const definitions = [ "UX stands for User Experience, which refers to how a pers
 "A form of process management that fast tracks incoming workflow by priority so the most critical work is attended to first.",
 "a fast and practical way to solve problems or make decisions."
 ];
+/*Arrays of Terms*/
 const concepts = [
   "UX",
   "UI",
@@ -100,46 +102,42 @@ const refinement = [
   "Finish Product",
   "Heuristics"
 ];
+/*Merged array of terms*/
 const allTerms = concepts.concat(research, planning, refinement);
 
-function selectCategory(clicked) {
-  if (clicked == "concepts" )
-  {
-    document.getElementById("term_list").innerHTML = "<p id='selected_category'>Concepts of UI/UX Design</p>";
-    for (var i=0; i < concepts.length; i++){
-      document.getElementById("term_list").innerHTML += "<li><a value='" + i + "' href='javascript:;' onclick='defineTerm(" + i + ")'>" + concepts[i] + "</a></li>";
-    }
+$(document).ready(function(){
+  /*Populate categories with terms*/
+  for (var i=0; i < concepts.length; i++){
+    document.getElementById("concepts").innerHTML += "<li><a class='terms' value='" + i + "' href='javascript:;' onclick='defineTerm(" + i + ")'>" + concepts[i] + "</a></li>";
   }
-  if (clicked == "research" )
-  {
-    document.getElementById("term_list").innerHTML = "<p id='selected_category'>Research</p>";
-    for (var i=0; i < research.length; i++){
-      document.getElementById("term_list").innerHTML += "<li class='terms'><a value='" + (i + concepts.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length) + ")'>" + research[i] + "</a></li>";
-    }
+  for (var i=0; i < research.length; i++){
+    document.getElementById("research").innerHTML += "<li><a class='terms' value='" + (i + concepts.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length) + ")'>" + research[i] + "</a></li>";
   }
-  if (clicked == "planning" )
-  {
-    document.getElementById("term_list").innerHTML = "<p id='selected_category'>Planning</p>";
-    for (var i=0; i < planning.length; i++){
-      document.getElementById("term_list").innerHTML += "<li class='terms'><a value='" + (i + concepts.length + research.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length + research.length) + ")'>" + planning[i] + "</a></li>";
-    }
+  for (var i=0; i < planning.length; i++){
+    document.getElementById("planning").innerHTML += "<li><a class='terms' value='" + (i + concepts.length + research.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length + research.length) + ")'>" + planning[i] + "</a></li>";
   }
-  if (clicked == "refinement" )
-  {
-    document.getElementById("term_list").innerHTML = "<p id='selected_category'>Refinement</p>";
-    for (var i=0; i < refinement.length; i++){
-      document.getElementById("term_list").innerHTML += "<li class='terms'><a value='" + (i + concepts.length + research.length + planning.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length + research.length + planning.length) + ")'>" + refinement[i] + "</a></li>";
-    }
+  for (var i=0; i < refinement.length; i++){
+    document.getElementById("refinement").innerHTML += "<li><a class='terms' value='" + (i + concepts.length + research.length + planning.length) + "' href='javascript:;' onclick='defineTerm(" + (i + concepts.length + research.length + planning.length) + ")'>" + refinement[i] + "</a></li>";
   }
-};
+  i=0 ;
+  $('.nonActive > li').hide()
+  /*Sliding Menu*/
+  $('.slide').click(function(){
+     $('.active').removeClass('active').addClass('nonActive')
+      $(this).removeClass('nonActive').addClass('active')
+      $('.active > li').show()
+      $('.nonActive > li').hide()
+      i= $(this).index()
+  })
+});
 
+/*User clicks a term, term box is populated*/
 function defineTerm(term) {
   document.getElementById("selected").innerHTML = "<h2>" + allTerms[term] + "</h2>";
   document.getElementById("def").innerHTML = definitions[term];
 }
-
+/*Clear Button*/
 function clearScreen() {
-    document.getElementById("term_list").innerHTML = "TERM OPTIONS";
-    document.getElementById("selected").innerHTML = "SELECTED TERM POPS UP HERE!!";
+    document.getElementById("selected").innerHTML = "SELECTED TERM DISPLAY HERE";
     document.getElementById("def").innerHTML = "The correct definition will display here.";
 }

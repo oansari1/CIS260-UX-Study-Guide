@@ -1,18 +1,20 @@
 *{ /*FORMATTING FOR EVERYTHING*/
 margin: 0;
 padding: 0;
-font-family: 'Proxima Nova', sans-serif;                 
+font-family: 'Proxima Nova', sans-serif;
 font-size: 1.02em;
 font-weight: 500;
-background-color: #eef2f4;
 border-radius: 30px;
 }
 
-h1 {font-size: 200%; /*UI/UX STUDY GUIDE HEADER*/
+body {height: 100%;}
+
+h1 {font-size: 150%; /*UI/UX STUDY GUIDE HEADER*/
 align-self: center;
 text-align: center;
-margin-top: 50px;
-margin-bottom: 50px;}
+color: black;
+padding: 0;
+margin: auto;}
 
 h2 {font-size: 150%;
 	align-self: center;
@@ -37,18 +39,18 @@ header {display: flex; /*NAVIGATION BETWEEN PAGES*/
 	  justify-content: space-evenly;
 	}
 
-	ul li {width: 33.3333333333333%;
+	ul li {width: 50%;
 	text-align: center;
 	height: 75px;
 }
-  
-  
+
+
 	li { /*NAVIGATION BUTTONS*/
 	  display: inline;
 	  float:left;
 	  border-radius: 0;
 		}
-	
+
 	li a{
 	display:block;
 	margin:0;
@@ -57,27 +59,30 @@ header {display: flex; /*NAVIGATION BETWEEN PAGES*/
 	text-decoration:none;
 	color: #151515; /*COLOR OF TEXT IN MAIN NAV MENU*/
 	width: 100%;
-	height: 25px;
+	height: 10px;
 	border-radius: 0;
-	background-color: #DEEAE6;
+	background-color: rgb(251, 247, 247);
 	}
-	
+ /*COLOR OF NAV BOXES UPON HOVER*/
 	li a:hover{
-	  background-color:#c5dfd2; /*COLOR OF NAV BOXES UPON HOVER*/
-  
-	} 
-	
+	  background-color:#c5dfd2;
+	}
+
+	.terms {
+		height: 10px;
+		padding-top: 5px;
+		padding-bottom: 10px;
+	}
+
 	/*Shadow effects*/
-	
+
 	.shadow
 	{
-		position:relative;       
-	
+		position:relative;
 	}
 	.shadow:before, .shadow:after
 	{
 	  content:"";
-		position:absolute; 
 		z-index:-1;
 		-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
 		-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
@@ -88,163 +93,17 @@ header {display: flex; /*NAVIGATION BETWEEN PAGES*/
 		right:10px;
 		-moz-border-radius:200px / 20px;
 		border-radius:200px / 20px;
-	} 
+	}
 	.shadow:after
 	{
-	  right:20px; 
+	  right:20px;
 		left:auto;
-		-webkit-transform:skew(8deg) rotate(3deg); 
-		   -moz-transform:skew(8deg) rotate(3deg);     
-			-ms-transform:skew(8deg) rotate(3deg);     
-			 -o-transform:skew(8deg) rotate(3deg); 
+		-webkit-transform:skew(8deg) rotate(3deg);
+		   -moz-transform:skew(8deg) rotate(3deg);
+			-ms-transform:skew(8deg) rotate(3deg);
+			 -o-transform:skew(8deg) rotate(3deg);
 				transform:skew(8deg) rotate(3deg);
 	}
-/*END OF MAIN NAVIGATION FORMATTING*/
-
-/* TERMS NAV BAR */
-
-#one {margin-left: 8%}
-
-#two{Margin-left: 8%;
-margin-right: 4%;}
-
-#three {margin-right: 8%;
-margin-left:4%}
-
-#four{Margin-right: 8%;}
-
-nav {
-display: flex;
-margin: auto;
-margin-bottom: 20px;
-background-color: #DEEAE6;
-align-items: center;
-align-content: center;
-}
-	  
-nav ul {
-list-style: none;
-text-decoration: none;
-background-color: #DEEAE6;
-border-radius: 0;
-width: 100%;
-}
-	  
-.category { /*JUST THE LITTLE TINY BUBBLE THAT THE TEXT IS IN. NOT THE ENTIRE BUTTON*/
-background-color: #DEEAE6;
-color: black;
-}
-	  
-nav > ul > li { /*ACTUAL BUTTONS FOR CATEGORIES*/
-width: 15%;
-text-align: center;
-display: inline-block;
-position: relative;
-background-color: #DEEAE6;
-border-radius: 0;
-}
-	  
-nav ul li:hover { /*WHOLE BUTTON HOVER BAKCGROUND #B2E3C9*/
-background-color: #B2E3C9;
-}
-	  
-nav ul li:hover > a { /*TINY TEXT BUBBLE NOT BUTTON ON HOVER#B2E3C9*/
-background-color: #B2E3C9;
-}
-	 
-/*END OF TERMS NAVIGATION BAR*/
-
-
-#bigbox {/*display: flex;
-margin: auto;*/
-width: 90%;  /*CONTAINS SELECTED, BUTTON, DEFINITION, TERMS*/
-/*border: 1px black solid;*/
-padding-left: 8%;
-padding-top: 5%;
-}
-
-#selected {display: flex; /*SHOULD BE WHERE THE SELECTED TERM APPEARS*/
-width: 40%;
-margin: auto;
-height: 50px;
-text-align: center;
-margin-bottom: 30px;
-align-items: center;
-justify-content: center;}
-
-
-#buttons {display: flex; /*CONTAINER BOX FOR THE BUTTONS. EASE OF FORMATTING*/
-width: 40%;
-margin: auto;
-height: 50px;
-text-align: center;
-margin-top: 30px;
-margin-bottom: 30px;
-align-items: center;
-justify-content: center;
-}
-
-
-#def {/*CONTAINER FOR OFFICIAL DEFINITION*/
-	width: 65%;
-	margin: auto;
-background-color: rgba(255,255,255,0.5);}
-
-.def { /*INSIDE DEFINITION CONTAINER*/
-display: flex;
-float: right;
-align-items: center;
-text-align: center;
-text-shadow: -1px 2px 3px white;
-border: 1px solid #0B3A5E;
-width: 50%;
-margin: 50px 200px;
-background-image: url("https://i.pinimg.com/564x/33/0c/03/330c03756d9d786344a09b609612d98b.jpg");
-background-size: 100%;
-height: 400px;}
-
-/*BOX WHERE THE LIST OF TERMS SHOULD APPEAR*/
-#term_list {
-display: flex;
-flex-flow: column nowrap;
-border-radius: 30%;
-float: left;
-height: 600px;
-width: 20%;
-margin: 0;
-text-align: center;
-border-radius: 0;
-font-size: 15pt;}
-
-#term_list li a {
-display:block;
-margin:0;
-padding-top: 5px;
-padding-bottom: 5px;
-text-decoration:none;
-color: #151515; /*COLOR OF TEXT*/
-width: 100%;
-height: auto;
-border-radius: 0;
-background-color: #eef2f4;
-}
-
-#selected_category {
-	font-size: 20pt;
-}
-
-p {font-weight: 600;
-color: black;
-padding-bottom: 10px;}
-
-.home-welcome {
-	text-align: center;
-}
-
-.contributions {
-	display: grid;
-	grid-template-columns: 1fr;
-}
 
 /*Button Styling*/
 .pushable {
@@ -268,3 +127,232 @@ padding-bottom: 10px;}
   .pushable:active .front {
     transform: translateY(-2px);
   }
+/*END OF MAIN NAVIGATION FORMATTING*/
+
+/* TERMS NAV BAR
+
+#one {margin-left: 8%}
+
+#two{Margin-left: 8%;
+margin-right: 4%;}
+
+#three {margin-right: 8%;
+margin-left:4%}
+
+#four{Margin-right: 8%;}
+
+nav {
+display: flex;
+margin: auto;
+margin-bottom: 20px;
+background-color: #DEEAE6;
+align-items: center;
+align-content: center;
+}
+
+nav ul {
+list-style: none;
+text-decoration: none;
+background-color: #DEEAE6;
+border-radius: 0;
+width: 100%;
+}
+
+.category { /*JUST THE LITTLE TINY BUBBLE THAT THE TEXT IS IN. NOT THE ENTIRE BUTTON
+background-color: #DEEAE6;
+color: black;
+}
+
+nav > ul > li { /*ACTUAL BUTTONS FOR CATEGORIES
+width: 15%;
+text-align: center;
+display: inline-block;
+position: relative;
+background-color: #DEEAE6;
+border-radius: 0;
+}
+
+nav ul li:hover { /*WHOLE BUTTON HOVER BAKCGROUND #B2E3C9
+background-color: #B2E3C9;
+}
+
+nav ul li:hover > a { /*TINY TEXT BUBBLE NOT BUTTON ON HOVER#B2E3C9
+background-color: #B2E3C9;
+}
+
+/*END OF TERMS NAVIGATION BAR*/
+
+
+#bigbox {display: flex;
+flex-direction: column;
+margin: auto;
+width: 50%;  /*CONTAINS SELECTED, BUTTON, DEFINITION*/
+/*border: 1px black solid;*/
+}
+
+#selected {display: flex; /*SHOULD BE WHERE THE SELECTED TERM APPEARS*/
+width: 50%;
+margin: auto;
+margin-top: 5%;
+height: 50px;
+text-align: center;
+margin-bottom: 5;
+align-items: center;
+justify-content: center;}
+
+
+.button {display: flex;
+margin: auto;
+width: 30%;
+background-color: white;
+border: 1px solid white;
+padding: 5px;}
+
+.button:hover{ /*DEFINE BUTTON*/
+	  background-color:#c5dfd2; /*COLOR OF CLEAR UPON HOVER*/
+
+	}
+
+#buttons {display: flex; /*CONTAINER BOX FOR THE BUTTONS. EASE OF FORMATTING*/
+width: 40%;
+margin: auto;
+height: 50px;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 30px;
+align-items: center;
+justify-content: center;
+}
+
+
+#def {/*CONTAINER FOR OFFICIAL DEFINITION*/
+	width: 50%;
+	margin: auto;
+background-color: rgba(255,255,255,0.5);}
+
+.def { /*INSIDE DEFINITION CONTAINER*/
+display: flex;
+float: right;
+align-items: center;
+text-align: center;
+text-shadow: -1px 2px 3px white;
+border: 1px solid #0B3A5E;
+width: 75%;
+margin: auto;
+background-image: url("https://i.pinimg.com/564x/33/0c/03/330c03756d9d786344a09b609612d98b.jpg");
+background-size: 100%;
+height: 400px;}
+
+/*BOX WHERE THE LIST OF TERMS SHOULD APPEAR
+#term_list {
+display: flex;
+flex-flow: column nowrap;
+border-radius: 30%;
+float: left;
+height: 600px;
+width: 20%;
+margin: 0;
+text-align: center;
+border-radius: 0;
+font-size: 15pt;}
+
+#term_list li a {
+display:block;
+margin:0;
+padding-top: 5px;
+padding-bottom: 5px;
+text-decoration:none;
+color: #151515; /*COLOR OF TEXT
+width: 100%;
+height: auto;
+border-radius: 0;
+background-color: #eef2f4;
+}
+
+#term_list :hover {
+background-color: #B2E3C9;}
+
+#selected_category {
+	font-size: 20pt;
+}
+
+.terms /*selected_term :hover {color: black; /*idk why this isn't working the way I want
+background-color: #eef2f4;} */
+
+p {font-size: 100%;
+color: black;
+padding-bottom: 10px;
+border-radius: 0;}
+
+
+/*HOME AND ABOUT BACKGROUND*/
+.background {background-image: url('leaves.jpg');
+height:1000px;}
+
+#instructions {padding-top: 5%;
+margin: auto;
+align-self: center;
+text-align: center;}
+
+
+
+
+/*SLIDER STUFF*/
+
+.slider{
+flex-direction: column;
+display: flex;
+float: left;
+align-items: center;
+text-align: center;
+width: 50%;
+margin: auto;
+margin-top: 5%;
+height: 400px;
+}
+
+
+.slide{
+    width: 75%;
+    height: 20px;
+    justify-content: center;
+    border-radius: 50px;
+    display: flex;
+    box-shadow: 3px 3px 5px black;
+    opacity: .5;
+	flex-direction: column;
+	margin-top: 10px;
+	float: left;
+
+}
+
+
+.active{
+    flex-grow: 1;
+    transition-duration: 1s;
+    opacity: 1;
+    padding: 10px;
+    border-radius: 25px;
+    padding-bottom: 100px
+}
+.nonActive{
+    flex-grow: 0;
+      opacity: .5;
+      transition-duration: 1s;
+
+}
+.slide:nth-of-type(1){background-color: pink;}
+.slide:nth-of-type(2){background-color: green;}
+.slide:nth-of-type(3){background-color: blue;}
+.slide:nth-of-type(4){background-color: red;}
+.slide:nth-of-type(5){background-color: yellow;}
+.slide:nth-of-type(6){background-color: purple;}
+
+@media screen and (max-width: 700px) {
+    .slide{
+        width: 20px;
+    }
+    .active{
+        border-radius: 30px
+    }
+}

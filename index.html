@@ -8,52 +8,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.cdnfonts.com/css/proxima-nova-2"              rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
         <script src="function.js"></script>
-        
-        
-        <!--- carousel for categories, or hover enlargement
-        pics? visual interest?
-        Logo for page title
-        Hover state for term selection
-        animate button
-        Content for Home and About -->
 </head>
+<style>body{background-color: #eef2f4;}</style>
 <body>
       <header>
-
-          <div class="container">
+          <div class="container" >
               <ul class="shadow cont">
-                <li id="home"><a href="home.html">HOME</a></li>
-                <li id="about"><a href="about.html">ABOUT</a></li>
+                <li id="about"><a href="about.html">CONTRIBUTIONS</a></li>
                 <li id="study"><a href="index.html">STUDY GUIDE</a></li>
               </ul>
             </div>
-            
-      </header> 
-  <h1>UI/UX Study Guide</h1>
-  <h2>Click a category to see a list of terms, then click a term to see the definition</h2>
-  <nav>
-      <ul>
-        <li class="category" id="one"><a id="concepts" href='javascript:;' onclick="selectCategory(this.id)">Concepts of UI/UX Design</a>
-        </li>
-        <li class="category" id="two"><a id="research" href='javascript:;' onclick="selectCategory(this.id)">Research</a>
-        </li>
-        <li class="category" id="three"><a id="planning" href='javascript:;' onclick="selectCategory(this.id)">Planning</a>
-        </li>
-        <li class="category" id="four"><a id="refinement" href='javascript:;' onclick="selectCategory(this.id)">Refinement</a>
-        </li>
-      </ul>
-    </nav>
-    
-<div id="bigbox"> <!-- CONTAINS TERMS BOX, SELECTED TERM, BUTTONS AND DEFINITION BOX-->
-<div id="term_list">TERM OPTIONS</div>
-
-<div id="selected">SELECTED TERM POPS UP HERE!!</div>
-<div class = "def" id="Term_Definition"> <p id = "def">The correct definition will display here.</p></div>
-<div id="buttons">
-<button class="pushable" id="Clear_Button"  onclick="clearScreen()"><span class="front">Clear</span></button>
-
-</div>
-</div>
+      </header>
+      <body>
+        <h1>UI/UX Study Guide</h1>
+        <h2>Click a category to see a list of terms, then click a term to see the definition</h2>
+        <div class="slider">
+          <div class="slide slide1 nonActive" id="concepts"><section href="javascript:;">Concepts of UI/UX</section></div>
+          <div class="slide slide2 nonActive" id="research"><section href="javascript:;">Research</section></div>
+          <div class="slide slide3 nonActive" id="planning"><section href="javascript:;">Planning</section></div>
+          <div class="slide slide4 nonActive" id="refinement"><section href="javascript:;">Refinement</section></div>
+        </div>
+        <div id="bigbox"> <!-- CONTAINS TERMS BOX, SELECTED TERM, BUTTONS AND DEFINITION BOX-->
+          <div id="selected">SELECTED TERM DISPLAY HERE</div>
+          <div class = "def" id="Term_Definition"> <div id = "def">The correct definition will display here.</div></div>
+          <div id="buttons">
+            <button class="pushable" id="Clear_Button"  onclick="clearScreen()"><span class="front">Clear</span></button>
+          </div>
+        </div>
 </body>
 </html>
