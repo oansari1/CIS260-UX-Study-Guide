@@ -8,19 +8,20 @@ border-radius: 30px;}
 
 body {height: 100%;}
 
-h1 {font-size: 150%; /*UI/UX STUDY GUIDE HEADER*/
-align-self: center;
-text-align: center;
-color: black;
-padding: 0;
-margin: auto;
-margin-top: 1%;}
-
+#logo {display: flex;
+	margin: auto;
+	width: 25%;
+	height: auto;}
+  
 h2 {font-size: 125%;
 	align-self: center;
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 20px;}
+
+h3 {font-size: 100%;
+font-weight: 700;
+font-family: 'Roboto', sans-serif;}
 
 header {display: flex; /*NAVIGATION BETWEEN PAGES*/
 	justify-content: space-evenly;

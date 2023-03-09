@@ -8,6 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.cdnfonts.com/css/proxima-nova-2"              rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
         <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
         <script src="function.js"></script>
 </head>
@@ -16,7 +19,7 @@
 
 <body>
       <header>
-          <div class="container" >
+          <div class="container">
               <ul class="shadow cont">
                 <li id="cont" class="nav"><a href="about.html">CONTRIBUTITORS</a></li>
                 <li id="ind" class="nav"><a href="index.html">STUDY GUIDE</a></li>
@@ -24,17 +27,17 @@
             </div>
       </header>
       <body>
-        <h1>UI/UX Study Guide</h1>
+        <img id="logo" src="logo.png" alt="UI/UX STUDY GUIDE">
         <h2>Click a category to see a list of terms, then click a term to see the definition</h2>
         <div class="slider">
-          <div class="slide slide1 nonActive" id="concepts"><section href="javascript:;"><b>-CONCEPTS OF UI/UX-</b></section></div>
-          <div class="slide slide2 nonActive" id="research"><section href="javascript:;">-RESEARCH-</section></div>
-          <div class="slide slide3 nonActive" id="planning"><section href="javascript:;">-PLANNING-</section></div>
-          <div class="slide slide4 nonActive" id="refinement"><section href="javascript:;">-REFINEMENT-</section></div>
+          <div class="slide slide1 nonActive" id="concepts"><section href="javascript:;"><h3>UI/UX Concepts</h3></section></div>
+          <div class="slide slide2 nonActive" id="research"><section href="javascript:;"><h3>Research</h3></section></div>
+          <div class="slide slide3 nonActive" id="planning"><section href="javascript:;"><h3>Planning</h3></section></div>
+          <div class="slide slide4 nonActive" id="refinement"><section href="javascript:;"><h3>Refinement</h3></section></div>
         </div>
                  
           <div class = "def" id="Term_Definition">  
-            <div id="selected">SELECTED TERM DISPLAYS HERE</div>
+            <div id="selected"><h3>Selected Term Displays Here</h3></div>
           <div id = "def">The correct definition will display here.</div>
         </div>
 </body>
